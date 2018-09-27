@@ -21,7 +21,8 @@
 <style>
   @component-namespace mint {
     @component loadmore {
-      // overflow: hidden;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
 
       @descendent content {
         @when dropped {
