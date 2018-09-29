@@ -341,8 +341,7 @@
             this.translate = '0';
             this.topStatus = 'pull';
           }
-        }
-        if (this.direction === 'up' && this.bottomReached && this.translate < 0) {
+        } else if (this.direction === 'up' && this.bottomReached && this.translate < 0) {
           this.bottomDropped = true;
           this.bottomReached = false;
           if (this.bottomStatus === 'drop') {
@@ -353,6 +352,8 @@
             this.translate = '0';
             this.bottomStatus = 'pull';
           }
+        } else {
+          this.translate = '0';
         }
         this.$emit('translate-change', this.translate);
         this.direction = '';
